@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Archivo:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Archivo:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
 
 <style>
   :root{
@@ -101,17 +101,18 @@
   @media(min-width:980px){
     .spine{ display:flex; }
     body{ padding-left:56px; }
-    html{ scroll-snap-type:y mandatory; }
-    main > section,
-    main > footer{
-      scroll-snap-align:none;
+
+    html{
+      scroll-snap-type:y proximity;
     }
+
     main > section.hero,
     main > section#about,
+    main > section#work,
     main > section#research,
     main > section#experience,
     main > section#next,
-    main > footer#contact{
+    footer#contact{
       scroll-snap-align:start;
       scroll-snap-stop:always;
     }
@@ -609,7 +610,7 @@
       </div>
       <div class="hero-meta-wrap">
         <figure class="hero-media">
-          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Editorial portrait treatment representing a fashion merchandising portfolio cover" decoding="async" fetchpriority="high" />
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Editorial portrait treatment representing a fashion merchandising portfolio" loading="lazy" decoding="async" />
           <figcaption>Editorial cover direction</figcaption>
         </figure>
         <p class="hero-meta">Fashion Technology student building the retail-side structure between <strong>what sells</strong> and <strong>what gets bought next</strong> — through merchandising systems, consumer behaviour models, and the odd dashboard nobody asked for but everybody needed.</p>
@@ -629,7 +630,7 @@
       <div class="eyebrow"><span class="no">00</span> About</div>
       <div class="about-grid">
         <figure class="about-media">
-          <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Fashion editorial workspace image symbolizing merchandising and buying analysis" loading="lazy" decoding="async" />
+          <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Fashion editorial workspace image symbolizing merchandising and buying analytics" loading="lazy" decoding="async" />
           <figcaption>About · floor to shop floor</figcaption>
         </figure>
         <div>
@@ -761,8 +762,8 @@
       <div class="about-grid">
         <p class="about-lede" style="color:var(--dark-paper);">Everyone's measuring sustainability differently — so nothing lines up.</p>
         <div class="about-body">
-          <p style="color:#c8c2ac;">Consumption drives most of a garment's lifetime environmental impact, yet it's the stage the industry measures worst. Tools like the Higg Index score products and factories rigorously, but stop at the point of sale — and can still misrank materials depending on how they're weighted. Academic research fills that gap with self-reported surveys that poorly predict real behaviour, leaving the field contradicting itself on basic questions like whether consumers actually pay more to be sustainable.</p>
-          <p style="color:#c8c2ac;">My proposal, ISCM, structures the gap into five measurable dimensions: <strong style="color:var(--dark-paper);">environmental perception, social &amp; ethical perception, cognitive alignment</strong> (the gap between what people say and what they do), <strong style="color:var(--dark-paper);">economic feasibility</strong>, and <strong style="color:var(--dark-paper);">behavioural engagement</strong> — the actual outcome.</p>
+          <p style="color:#c8c2ac;">Consumption drives most of a garment's lifetime environmental impact, yet it's the stage the industry measures worst. Tools like the Higg Index score products rigorously, but they stop at the point of sale — and a garment can still mislead consumers on how it should be worn, maintained, or kept in circulation long after purchase.</p>
+          <p style="color:#c8c2ac;">My proposal, ISCM, structures the gap into five measurable dimensions: <strong style="color:var(--dark-paper);">environmental perception, social &amp; ethical perception, cognitive alignment, economic feasibility, and behavioural engagement</strong> — the actual outcome.</p>
           <p style="color:#c8c2ac;">It's the same instinct behind the CTA dashboard: build a structured, comparable system where none exists, instead of relying on scattered or self-reported inputs.</p>
         </div>
       </div>
@@ -826,8 +827,8 @@
       <div class="next-grid">
         <div>
           <p class="next-lede">I've seen how a product gets made. Now I want to own how it sells.</p>
-          <p style="color:#c8c2ac; max-width:52ch; margin-top:20px;">Working inside an export house taught me where product comes from — sourcing, T&amp;A, buyer timelines, the operational cost behind every SKU. What I don't yet have full visibility into is what happens after: how that product performs at the point of sale, and why a consumer picks it up or walks past it.</p>
-          <p style="color:#c8c2ac; max-width:52ch; margin-top:16px;">My graduation project connects POS-level signal — what's actually selling, to whom, how fast — with the buying and assortment decisions merchandisers make upstream. Same instinct as the CTA dashboard and the ISCM research: build the structure when the data exists but isn't usable yet.</p>
+          <p style="color:#c8c2ac; max-width:52ch; margin-top:20px;">Working inside an export house taught me where product comes from — sourcing, T&amp;A, buyer timelines, the operational cost behind every SKU. What I don't yet have is full visibility into what happens after: how that product performs at the point of sale, and why a consumer picks it up or walks past it.</p>
+          <p style="color:#c8c2ac; max-width:52ch; margin-top:16px;">My graduation project connects POS-level signal — what's actually selling, to whom, how fast — with the buying and assortment decisions merchandisers make upstream. Same instinct as the CTA dashboard: build the structure when data exists but isn't usable yet.</p>
         </div>
         <ul class="bring-list">
           <li><span class="n">01</span><div><strong>A merchandising-ops foundation</strong>I understand what a buying, sizing or promotion call actually costs to execute upstream — not just how it looks on a dashboard.</div></li>
