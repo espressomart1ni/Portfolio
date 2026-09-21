@@ -101,10 +101,19 @@
   @media(min-width:980px){
     .spine{ display:flex; }
     body{ padding-left:56px; }
-    html{ scroll-snap-type:y proximity; }
+    html{ scroll-snap-type:y mandatory; }
     main > section,
     main > footer{
+      scroll-snap-align:none;
+    }
+    main > section.hero,
+    main > section#about,
+    main > section#research,
+    main > section#experience,
+    main > section#next,
+    main > footer#contact{
       scroll-snap-align:start;
+      scroll-snap-stop:always;
     }
   }
 
