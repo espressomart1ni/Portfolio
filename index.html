@@ -27,7 +27,7 @@
   *{ box-sizing:border-box; }
   html{
     scroll-behavior:smooth;
-    scroll-snap-type:y proximity;
+    scroll-snap-type:none;
     scroll-padding-top:calc(var(--header-offset) + env(safe-area-inset-top, 0px));
   }
   ::selection{ background:var(--red); color:var(--paper); }
@@ -101,6 +101,11 @@
   @media(min-width:980px){
     .spine{ display:flex; }
     body{ padding-left:56px; }
+    html{ scroll-snap-type:y proximity; }
+    main > section,
+    main > footer{
+      scroll-snap-align:start;
+    }
   }
 
   header.top{
@@ -136,7 +141,6 @@
   section{ padding:94px 0; }
   main > section,
   main > footer{
-    scroll-snap-align:start;
     scroll-margin-top:calc(var(--header-offset) + env(safe-area-inset-top, 0px));
   }
   .rule{
